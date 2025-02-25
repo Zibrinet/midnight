@@ -1,0 +1,12 @@
+{
+  "name": "project-midnight",
+  "version": "1.0.0",
+  "description": "A cyberpunk visual novel game",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 
