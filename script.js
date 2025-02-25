@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Store initial clickable areas
     const initialClickableAreas = {
-        zak: { x: 300, y: 600, width: 150, height: 200, dialogue: "Yo, Haru, heard the cleaners chucked some fiery art in the alley trash last night. Wild, right?", portrait: "assets/zak.png", signal: "CRYPT 88.42" },
-        rai: { x: 1000, y: 650, width: 200, height: 200, dialogue: "Lost your phoenix painting, huh? Too hot to handle—literally. Check where the garbage stinks.", portrait: "assets/rai.png", signal: "CRYPT 142.17" },
-        admin: { x: 1400, y: 400, width: 300, height: 400, dialogue: "The phoenix's eyes see beyond the refuse… seek the void beyond the steam, Haru.", portrait: "assets/admin.jpg", signal: "CRYPT 999.99" },
+        zak: { x: 300, y: 600, width: 150, height: 200, dialogue: "Yo, Haru, heard the cleaners chucked some fiery art in the alley trash last night. Wild, right?", portrait: "/assets/zak.png", signal: "CRYPT 88.42" },
+        rai: { x: 1000, y: 650, width: 200, height: 200, dialogue: "Lost your phoenix painting, huh? Too hot to handle—literally. Check where the garbage stinks.", portrait: "/assets/rai.png", signal: "CRYPT 142.17" },
+        admin: { x: 1400, y: 400, width: 300, height: 400, dialogue: "The phoenix's eyes see beyond the refuse… seek the void beyond the steam, Haru.", portrait: "/assets/admin.jpg", signal: "CRYPT 999.99" },
         alleyExit: { x: 50, y: 400, width: 100, height: 200, action: "transitionToAlley" }
     };
 
@@ -74,14 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 50);
         
         dialogueBox.style.display = 'block';
-        characterPortrait.src = 'assets/admin.jpg';
+        characterPortrait.src = '/assets/admin.jpg';
         dialogueText.textContent = "The phoenix rises from the ashes! My painting... it's here!";
         signalStrength.textContent = "CRYPT 777.77";
         setTimeout(() => dialogueBox.style.display = 'none', 3000);
     }
 
     function transitionToAlley() {
-        background.src = 'assets/alley.webp';
+        background.src = '/assets/alley.webp';
         doorHandle.style.display = 'none';
         phoenixPainting.style.display = 'none';
         phoenixPainting.classList.remove('reveal');
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update Haru for alley scene
         const haru = document.getElementById('haru');
         if (haru) {
-            haru.src = 'Assets/haru-standing3.png';
+            haru.src = '/assets/haru-standing3.png';
             haru.style.display = 'block';
             haru.classList.add('alley-position');
         }
@@ -139,13 +139,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function transitionToShop() {
-        background.src = 'assets/ramen-shop.jpg';
+        background.src = '/assets/ramen-shop.jpg';
         doorHandle.style.display = 'block';
         
         // Reset Haru's image and position for shop scene
         const haru = document.getElementById('haru');
         if (haru) {
-            haru.src = 'Assets/haru-standing3.png';
+            haru.src = '/assets/haru-standing3.png';
             haru.style.display = 'block';
             haru.classList.remove('alley-position');
         }
