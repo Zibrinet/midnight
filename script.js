@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update Haru for alley scene
         const haru = document.getElementById('haru');
         if (haru) {
-            haru.src = 'Assets/haru-standing4.png';
+            haru.src = 'Assets/haru-standing3.png';
             haru.style.display = 'block';
             haru.classList.add('alley-position');
         }
